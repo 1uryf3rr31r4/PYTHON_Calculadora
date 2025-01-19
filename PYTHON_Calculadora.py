@@ -41,7 +41,7 @@ def opcoes_4():
 
 def dividir(num1, num2):
     try:
-        return f'{num1}/{num2} = {num1/num2}'
+        return f'{num1} / {num2} = {num1/num2}'
     except ZeroDivisionError:
         return 'O denominador deve ser diferente de zero.'
     except TypeError:
@@ -55,11 +55,11 @@ def menu_1():
             num1=float(input('Numero 1: '))
             num2=float(input('Numero 2: '))
             if opcao==1:
-                print(f'{num1}+{num2} = {num1+num2}')
+                print(f'{num1} + {num2} = {num1+num2}')
             elif opcao==2:
-                print(f'{num1}-{num2} = {num1+num2}')
+                print(f'{num1} - {num2} = {num1-num2}')
             elif opcao==3:
-                print(f'{num1}x{num2} = {num1*num2}')
+                print(f'{num1} x {num2} = {num1*num2}')
             else:
                 print(dividir(num1, num2))
         else:
