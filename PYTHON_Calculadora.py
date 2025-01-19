@@ -66,9 +66,35 @@ def menu_1():
             if opcao!=5:
                 print('Opção Inválida')
 
+def menu_2():
+    opcao=0
+    while opcao!=6:
+        opcao=int(input('>> '))
+        if opcao in range(1,6):
+            if opcao==1 or opcao==2 or opcao==4:
+                num1=float(input('Número: '))
+                if opcao==1:
+                    print(f'{num1}² = {num1**2}')
+                elif opcao==2:
+                    print(f'{num1}³ = {num1**3}')
+                else:
+                    print(f'O log de {num1} na base 10 é {math.log10(num1)}')
+            else:
+                if opcao==3:
+                    base=float(input('Base da Potência: '))
+                    exp=float(input('Expoente: '))
+                    print(f'{base}^{exp} = {base*exp}')
+                if opcao==5:
+                    base=float(input('Base do Log: '))
+                    num=float(input('Número: '))
+                    print(f'O log de {num} na base {base} é : {math.log(num, base)}')
+        else:
+            if opcao!=6:
+                print('Opção Invalida')
+
 def main():
     escolha=''
-    while escolha!=5:
+    while escolha!='5':
         menu_principal()
         escolha=input('>> ')
         if escolha in list('1234'):
@@ -77,9 +103,17 @@ def main():
                 print('=' * 65)
                 menu_1()
                 print('=' * 65)
-        elif escolha==5:
-            print('Fim do Programa')
+            elif escolha=='2':
+                opceos_2()
+                print('=' * 65)
+                menu_2()
+                print('=' * 65)
         else:
-            print('Opção Inválida')
+            if escolha=='5':
+                print('Fim do Programa')
+            else:
+                print('Opção Inválida')
 
-main()
+
+if __name__=='__main__':
+  main()
