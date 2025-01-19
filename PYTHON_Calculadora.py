@@ -41,8 +41,45 @@ def opcoes_4():
 
 def dividir(num1, num2):
     try:
-        return f'{num1/num2}={num1/num2}'
+        return f'{num1}/{num2} = {num1/num2}'
     except ZeroDivisionError:
         return 'O denominador deve ser diferente de zero.'
     except TypeError:
         return 'Insira um valor válido'
+
+def menu_1():
+    opcao=0
+    while opcao!=5:
+        opcao=int(input('>> '))
+        if opcao in range(1,5):
+            num1=float(input('Numero 1: '))
+            num2=float(input('Numero 2: '))
+            if opcao==1:
+                print(f'{num1}+{num2} = {num1+num2}')
+            elif opcao==2:
+                print(f'{num1}-{num2} = {num1+num2}')
+            elif opcao==3:
+                print(f'{num1}x{num2} = {num1*num2}')
+            else:
+                print(dividir(num1, num2))
+        else:
+            if opcao!=5:
+                print('Opção Inválida')
+
+def main():
+    escolha=''
+    while escolha!=5:
+        menu_principal()
+        escolha=input('>> ')
+        if escolha in list('1234'):
+            if escolha=='1':
+                opcoes_1()
+                print('=' * 65)
+                menu_1()
+                print('=' * 65)
+        elif escolha==5:
+            print('Fim do Programa')
+        else:
+            print('Opção Inválida')
+
+main()
