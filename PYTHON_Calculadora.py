@@ -108,6 +108,16 @@ def menu_3():
             if opcao!=4:
                 print('Opção Inválida')
 
+def menu_4():
+    opcao=0
+    while opcao!=2:
+        opcao=int(input('>> '))
+        if opcao==1:
+            num=int(input('Digite o número inteiro:'))
+            print(f'{num}!={math.factorial(num)}')
+        else:
+            if opcao!=2:
+                print('Opção Inválida')
 
 
 def main():
@@ -130,6 +140,11 @@ def main():
                 opcoes_3()
                 print('=' * 65)
                 menu_3()
+                print('=' * 65)
+            elif escolha=='4':
+                opcoes_4()
+                print('=' * 65)
+                menu_4()
                 print('=' * 65)
         else:
             if escolha=='5':
