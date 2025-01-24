@@ -83,7 +83,7 @@ def menu_2():
                 if opcao==3:
                     base=float(input('Base da Potência: '))
                     exp=float(input('Expoente: '))
-                    print(f'{base}^{exp} = {base*exp}')
+                    print(f'{base}^{exp} = {base**exp}')
                 if opcao==5:
                     base=float(input('Base do Log: '))
                     num=float(input('Número: '))
