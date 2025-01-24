@@ -92,6 +92,24 @@ def menu_2():
             if opcao!=6:
                 print('Opção Invalida')
 
+def menu_3():
+    opcao=0
+    while opcao!=4:
+        opcao=int(input('>> '))
+        if opcao in range(1,4):
+            num=float(input('Número: '))
+            if opcao==1:
+                print(f'sen({num})={math.sin(num)}')
+            elif opcao==2:
+                print(f'cos({num}) = {math.cos(num)}')
+            else:
+                print(f'tan({num}) = {math.tan(num)}')
+        else:
+            if opcao!=4:
+                print('Opção Inválida')
+
+
+
 def main():
     escolha=''
     while escolha!='5':
@@ -107,6 +125,11 @@ def main():
                 opceos_2()
                 print('=' * 65)
                 menu_2()
+                print('=' * 65)
+            elif escolha=='3':
+                opcoes_3()
+                print('=' * 65)
+                menu_3()
                 print('=' * 65)
         else:
             if escolha=='5':
